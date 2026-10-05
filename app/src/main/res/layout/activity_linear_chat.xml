@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_standard">
+
+    <!-- ScrollView с weight=1 занимает всё свободное место сверху -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="[LinearLayout Chat]\nПривет! Это окно чата на LinearLayout."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="Сообщение 2: Скролл работает благодаря ScrollView с layout_weight=1."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="Сообщение 3: Добавьте больше текста для проверки прокрутки."
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Нижняя панель ввода -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_field_height"
+        android:orientation="horizontal">
+
+        <!-- EditText с weight=1 занимает всё свободное место слева -->
+        <EditText
+            android:id="@+id/etMessageLinear"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="Введите сообщение..."
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btnSendLinear"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="match_parent"
+            android:text="Отправить" />
+    </LinearLayout>
+</LinearLayout>
