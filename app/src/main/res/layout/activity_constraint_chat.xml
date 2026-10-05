@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:padding="@dimen/padding_standard">
 
-    <!-- ScrollView привязан к верху экрана и к полю ввода -->
     <ScrollView
         android:id="@+id/scrollViewConstraint"
         android:layout_width="0dp"
@@ -16,6 +15,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:id="@+id/chatContainerConstraint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -23,20 +23,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="12dp"
-                android:text="[ConstraintLayout Chat]\nПривет! Это окно чата на ConstraintLayout."
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="12dp"
-                android:text="Все элементы растягиваются и позиционируются с помощью якорей привязки."
+                android:padding="8dp"
+                android:text="[ConstraintLayout Chat]\nПривет! Напишите сообщение ниже."
                 android:textSize="16sp" />
         </LinearLayout>
     </ScrollView>
 
-    <!-- Поле ввода слева от кнопки -->
     <EditText
         android:id="@+id/etMessageConstraint"
         android:layout_width="0dp"
@@ -47,11 +39,12 @@
         app:layout_constraintEnd_toStartOf="@id/btnSendConstraint"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- Кнопка справа фиксированной ширины -->
     <Button
         android:id="@+id/btnSendConstraint"
-        android:layout_width="@dimen/button_width"
+        android:layout_width="wrap_content"
         android:layout_height="@dimen/input_field_height"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
         android:text="Отправить"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
