@@ -29,7 +29,6 @@ class LinearChatActivity : AppCompatActivity() {
                 chatContainer.addView(textView)
                 etMessage.text.clear()
 
-                // Прокрутка вниз к последнему сообщению
                 scrollView.post { scrollView.fullScroll(ScrollView.FOCUS_DOWN) }
             }
         }
